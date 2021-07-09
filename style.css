@@ -94,12 +94,12 @@ body {
 
 .pricing-area {
    margin: 15px 0;
-   padding: 15px;
+   /*padding: 15px;*/
    border-radius: 20px;
-   background: #fff;
+   /*background: #fff;*/
 }
 .pricing-area h5 {
-   font-size: 22px;
+   font-size: 24px;
    font-weight: 400;
    color: #013d59;
 }
