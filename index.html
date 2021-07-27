@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <!-- GOOGLE FONT CDN -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Teko:wght@300;400;500;600&display=swap" rel="stylesheet">
+   <!-- FONT AWESOME CDN -->
+   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css">
+   <!-- BOOTSTRAP CDN -->
+   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/css/bootstrap.min.css">
+   <title>Shopping Cart</title>
+   <link rel="stylesheet" href="style.css">
+</head>
+<body>
+   
+
+
+   <div class="container">
+      <div class="row">
+         <div class="col d-flex flex-column justify-content-center">
+            <div class="box">
+               <div id="cart-box">
+                  <div class="item-area" id="product1">
+                     <div class="row">
+                        <div class="col-4 col-md-3">
+                           <div class="img-box">
+                              <img class="img-fluid" src="airpods-pro.jpg" alt="">
+                           </div>
+                        </div>
+                        <div class="col-8 col-md-9">
+                           <div class="info-box">
+                              <div class="txt">
+                                 <h3>AirPods Pro</h3>
+                                 <p id="airpodPrice" class="price">$249</p>
+                              </div>
+                              <div class="quantity">
+                                 <button class="btn" onclick="quantityCount('airpod', false)"><i class="fa fa-minus"></i></button>
+                                 <input id="airpodCount" class="form-control" type="text" value="1">
+                                 <button class="btn" onclick="quantityCount('airpod', true)"><i class="fa fa-plus"></i></button>
+                              </div>
+                              <button class="btn remove-btn"><i class="fa fa-trash-alt"></i></button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="item-area" id="product2">
+                     <div class="row">
+                        <div class="col-4 col-md-3">
+                           <div class="img-box">
+                              <img class="img-fluid" src="watch-series6.jpg" alt="">
+                           </div>
+                        </div>
+                        <div class="col-8 col-md-9">
+                           <div class="info-box">
+                              <div class="txt">
+                                 <h3>Apple Watch Series 6</h3>
+                                 <p id="watchPrice" class="price">$399</p>
+                              </div>
+                              <div class="quantity">
+                                 <button class="btn" onclick="quantityCount('watch', false)"><i class="fa fa-minus"></i></button>
+                                 <input id="watchCount" class="form-control" type="text" value="1">
+                                 <button class="btn" onclick="quantityCount('watch', true)"><i class="fa fa-plus"></i></button>
+                              </div>
+                              <button class="btn remove-btn"><i class="fa fa-trash-alt"></i></button>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="pricing-area">
+                     <h5>Subtotal <span id="subTotal">$648</span></h5>
+                     <h5>Tax (10%) <span id="tax">$65</span></h5>
+                     <h5 class="total-price">Grand Total <span id="grandTotal">$713</span></h5>
+                  </div>
+                  <div class="checkout-btn">
+                     <button id="checkoutBtn" onclick="checkOut()" class="btn" data-toggle="modal" data-target="#alertBox">CHECK IT OUT</button>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+   <div class="modal fade" id="alertBox" data-backdrop="static">
+      <div class="modal-dialog modal-dialog-centered text-center">
+         <div class="modal-content">
+            <div class="modal-body">
+              <p id="alertText"></p>
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">OKEH</button>
+            </div>
+         </div>
+      </div>
+   </div>
+
+
+
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.bundle.min.js"></script>
+   <script src="script.js"></script>
+</body>
+</html>
